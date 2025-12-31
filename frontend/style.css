@@ -1,0 +1,57 @@
+/* Fade animation */
+.fade {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Chat bubbles */
+.chat-bubble {
+  max-width: 75%;
+  transition: transform 0.2s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.01);
+}
+
+.user-bubble {
+  background: linear-gradient(
+    135deg,
+    rgba(16,185,129,0.35),
+    rgba(16,185,129,0.15)
+  );
+  border: 1px solid rgba(16,185,129,0.5);
+}
+
+.bot-bubble {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.05)
+  );
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Typing dots animation */
+.typing span {
+  animation: blink 1.4s infinite both;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
